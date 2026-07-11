@@ -27,7 +27,7 @@
     <link rel="stylesheet" href="./style.css" />
   </head>
   <body>
-    <header class="site-header" aria-label="Tea ceremony booking header">
+    <header class="site-header" aria-label="Tea ceremony chat header">
       <a class="brand" href="#top" aria-label="Tea ceremony experience home">
         <span class="brand-mark">茶</span>
         <span>San Francisco Tea Ceremony</span>
@@ -38,9 +38,7 @@
         <a href="#host">Host</a>
         <a href="#faq">FAQ</a>
       </nav>
-      <a class="button button-small" href="https://www.supersaas.jp/schedule/tea_ceremony/Tea_Ceremony">
-        Book
-      </a>
+      <button class="button button-small" type="button" data-chat-trigger>Chat with Kazuki</button>
     </header>
 
     <main id="top">
@@ -58,10 +56,8 @@
           <h1 id="hero-title">Authentic Matcha Tea Ceremony Experience in San Francisco</h1>
           <p class="hero-subtitle">A private Japanese tea ceremony brought directly to your home.</p>
           <div class="hero-actions">
-            <a class="button button-primary" href="https://www.supersaas.jp/schedule/tea_ceremony/Tea_Ceremony">
-              Book Your Tea Ceremony
-            </a>
-            <a class="button button-secondary" href="#experience">See the Experience</a>
+            <button class="button button-primary" type="button" data-chat-trigger>Chat with Kazuki</button>
+            <button class="button button-secondary" type="button" data-chat-trigger>Ask a Question</button>
           </div>
         </div>
       </section>
@@ -153,7 +149,7 @@
       <section id="details" class="section details-section" aria-labelledby="details-title">
         <div class="section-heading">
           <p class="eyebrow">Details</p>
-          <h2 id="details-title">What to know before booking.</h2>
+          <h2 id="details-title">What to know before getting started.</h2>
         </div>
         <dl class="details-list">
           <div>
@@ -232,7 +228,7 @@
       <section id="faq" class="section muted-section" aria-labelledby="faq-title">
         <div class="section-heading">
           <p class="eyebrow">FAQ</p>
-          <h2 id="faq-title">Common questions before you book.</h2>
+          <h2 id="faq-title">Common questions before you chat.</h2>
         </div>
         <div class="faq-list">
           <details>
@@ -256,8 +252,8 @@
             <p>Yes. The Japanese tea ceremony experience is free of charge.</p>
           </details>
           <details>
-            <summary>How do I book?</summary>
-            <p>Click any booking button on this page to choose your preferred time through SuperSaaS.</p>
+            <summary>How do I get started?</summary>
+            <p>Start a chat with Kazuki to ask questions, discuss your location, and check availability.</p>
           </details>
         </div>
       </section>
@@ -305,15 +301,51 @@
       <section class="final-cta" aria-labelledby="final-title">
         <p class="eyebrow">Private matcha experience in San Francisco</p>
         <h2 id="final-title">Bring Japanese Hospitality Into Your Home</h2>
-        <a class="button button-primary" href="https://www.supersaas.jp/schedule/tea_ceremony/Tea_Ceremony">
-          Book Your Tea Ceremony
-        </a>
+        <button class="button button-primary" type="button" data-chat-trigger>Chat with Kazuki</button>
       </section>
     </main>
 
-    <a class="sticky-booking" href="https://www.supersaas.jp/schedule/tea_ceremony/Tea_Ceremony">
-      Book Your Tea Ceremony
-    </a>
+    <button class="sticky-booking" type="button" data-chat-trigger>Chat with Kazuki</button>
+
+    <!--
+      Tawk.to setup notes:
+      - Paste the official Tawk.to embed script below this comment when it is available.
+      - Configure this welcome message in the Tawk.to dashboard, not as visible page text:
+        "Hi, I’m Kazuki, your tea ceremony host.
+
+        Have a question before inviting me to your home?
+
+        Feel free to message me here. No booking is required."
+      - Configure automatic responses and quick replies in Tawk.to if supported by your selected settings:
+        "Thanks for reaching out. What would you like to know about the tea ceremony experience?"
+        Suggested quick replies: How does it work? / Is it really free? / Who will visit my home? / Check availability
+    -->
+    <!-- TAWK.TO LIVE CHAT SCRIPT GOES HERE -->
+<!--Start of Tawk.to Script-->
+
+<script type="text/javascript">
+
+var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+
+(function(){
+
+var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+
+s1.async=true;
+
+s1.src='https://embed.tawk.to/6a51cc7c99e61d1d501ed3fc/1jt7odi3r';
+
+s1.charset='UTF-8';
+
+s1.setAttribute('crossorigin','*');
+
+s0.parentNode.insertBefore(s1,s0);
+
+})();
+
+</script>
+
+<!--End of Tawk.to Script-->
 
     <script src="./script.js"></script>
   </body>
