@@ -375,6 +375,80 @@ dd {
   background: #fffdf8;
 }
 
+.media-section {
+  background: #fffdf8;
+}
+
+.media-grid {
+  display: grid;
+  gap: 16px;
+}
+
+.media-card {
+  min-width: 0;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.78);
+  box-shadow: 0 12px 34px rgba(35, 32, 28, 0.06);
+}
+
+.media-card-link {
+  display: grid;
+  min-height: 100%;
+  gap: 18px;
+  padding: 24px;
+}
+
+.media-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  color: var(--muted);
+  font-size: 12px;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.media-meta span,
+.media-meta time {
+  display: inline-flex;
+  align-items: center;
+}
+
+.media-meta span:not(:last-child)::after,
+.media-meta time:not(:last-child)::after {
+  content: "";
+  width: 4px;
+  height: 4px;
+  margin-left: 8px;
+  border-radius: 50%;
+  background: var(--line);
+}
+
+.media-card h3 {
+  margin: 0;
+  font-family: var(--serif);
+  font-size: 25px;
+  line-height: 1.08;
+}
+
+.media-read-more {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  color: var(--matcha-dark);
+  font-size: 14px;
+  font-weight: 800;
+}
+
+.external-indicator {
+  font-size: 13px;
+}
+
+.media-card-link:hover .media-read-more {
+  color: var(--matcha);
+}
+
 .board-card,
 .company-card {
   padding: 26px;
@@ -502,6 +576,10 @@ details p {
     grid-template-columns: repeat(5, minmax(0, 1fr));
   }
 
+  .media-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
   .details-list div {
     grid-template-columns: 220px minmax(0, 1fr);
     gap: 22px;
@@ -542,6 +620,12 @@ details p {
 
   .button-secondary {
     display: none;
+  }
+}
+
+@media (min-width: 720px) and (max-width: 1040px) {
+  .media-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
 
