@@ -27,7 +27,7 @@
     <link rel="stylesheet" href="./style.css" />
   </head>
   <body>
-    <header class="site-header" aria-label="Tea ceremony chat header">
+    <header class="site-header" aria-label="Tea ceremony booking header">
       <a class="brand" href="#top" aria-label="Tea ceremony experience home">
         <span class="brand-mark">茶</span>
         <span>San Francisco Tea Ceremony</span>
@@ -38,8 +38,9 @@
         <a href="#host">Host</a>
         <a href="#media">Media</a>
         <a href="#faq">FAQ</a>
+        <a href="#contact">Contact</a>
       </nav>
-      <button class="button button-small" type="button" data-chat-trigger>Chat with Kazuki</button>
+      <a class="button button-small" href="https://www.supersaas.jp/schedule/tea_ceremony" target="_blank" rel="noopener">Book Here</a>
     </header>
 
     <main id="top">
@@ -291,7 +292,7 @@
       <section id="faq" class="section muted-section" aria-labelledby="faq-title">
         <div class="section-heading">
           <p class="eyebrow">FAQ</p>
-          <h2 id="faq-title">Common questions before you chat.</h2>
+          <h2 id="faq-title">Common questions before you reserve.</h2>
         </div>
         <div class="faq-list">
           <details>
@@ -316,7 +317,7 @@
           </details>
           <details>
             <summary>How do I get started?</summary>
-            <p>Start a chat with Kazuki to ask questions, discuss your location, and check availability.</p>
+            <p>Use any Book Here button on this page to open the reservation page and choose your preferred time.</p>
           </details>
         </div>
       </section>
@@ -374,6 +375,52 @@
         </div>
       </section>
 
+      <section id="contact" class="section contact-section" aria-labelledby="contact-title">
+        <div class="section-heading contact-heading">
+          <p class="eyebrow">Contact</p>
+          <h2 id="contact-title">Contact Kazuki</h2>
+          <p>
+            Have a question about the private tea ceremony experience? Send a message and I’ll get back
+            to you as soon as possible.
+          </p>
+        </div>
+        <form
+          class="contact-form"
+          name="contact"
+          method="POST"
+          data-netlify="true"
+          netlify-honeypot="bot-field"
+          action="/thank-you.html"
+        >
+          <input type="hidden" name="form-name" value="contact" />
+          <p class="hidden" aria-hidden="true">
+            <label>
+              Do not fill this out:
+              <input name="bot-field" />
+            </label>
+          </p>
+          <div class="form-grid">
+            <div class="form-field">
+              <label for="contact-name">Name</label>
+              <input id="contact-name" type="text" name="name" required autocomplete="name" />
+            </div>
+            <div class="form-field">
+              <label for="contact-email">Email</label>
+              <input id="contact-email" type="email" name="email" required autocomplete="email" />
+            </div>
+            <div class="form-field">
+              <label for="contact-subject">Subject</label>
+              <input id="contact-subject" type="text" name="subject" required />
+            </div>
+            <div class="form-field form-field-full">
+              <label for="contact-message">Message</label>
+              <textarea id="contact-message" name="message" rows="6" required></textarea>
+            </div>
+          </div>
+          <button class="button button-primary" type="submit">Send Message</button>
+        </form>
+      </section>
+
       <section class="final-cta" aria-labelledby="final-title">
         <p class="eyebrow">Private matcha experience in San Francisco</p>
         <h2 id="final-title">Bring Japanese Hospitality Into Your Home</h2>
@@ -381,34 +428,7 @@
       </section>
     </main>
 
-    <button class="sticky-booking" type="button" data-chat-trigger>Chat with Kazuki</button>
-
-    <!-- TAWK.TO LIVE CHAT SCRIPT GOES HERE -->
-<!--Start of Tawk.to Script-->
-
-<script type="text/javascript">
-
-var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
-
-(function(){
-
-var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
-
-s1.async=true;
-
-s1.src='https://embed.tawk.to/6a51cc7c99e61d1d501ed3fc/1jt7odi3r';
-
-s1.charset='UTF-8';
-
-s1.setAttribute('crossorigin','*');
-
-s0.parentNode.insertBefore(s1,s0);
-
-})();
-
-</script>
-
-<!--End of Tawk.to Script-->
+    <a class="sticky-booking" href="https://www.supersaas.jp/schedule/tea_ceremony" target="_blank" rel="noopener">Book Here</a>
 
     <script src="./script.js"></script>
   </body>
