@@ -19,6 +19,20 @@ document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
   });
 });
 
+const bookingUrl = "https://www.supersaas.jp/schedule/tea_ceremony";
+
+document.querySelectorAll(`a[href="${bookingUrl}"]`).forEach((button) => {
+  button.addEventListener("click", () => {
+    if (typeof window.gtag !== "function") return;
+
+    window.gtag("event", "book_here_click", {
+      event_category: "booking",
+      event_label: "Book Here",
+      link_url: bookingUrl,
+    });
+  });
+});
+
 // Add future media coverage items here
 const mediaItems = [
   {
